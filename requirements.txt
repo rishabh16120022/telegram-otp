@@ -2,3 +2,5 @@ aiogram
 telethon
 flask
 razorpay
+qrcode
+pillow
