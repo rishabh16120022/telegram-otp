@@ -9,16 +9,16 @@ from flask import Flask, request
 import razorpay
 
 # === Configuration ===
-API_TOKEN = 'YOUR_BOT_TOKEN_HERE'
-API_ID = YOUR_API_ID
-API_HASH = 'YOUR_API_HASH'
-OWNER_ID = 123456789
-OWNER_USERNAME = '@yourusername'
-ACCOUNT_PRICE = 10
-UPI_ID = 'yourupi@upi'
-RAZORPAY_KEY_ID = 'YOUR_RZP_KEY_ID'
-RAZORPAY_KEY_SECRET = 'YOUR_RZP_KEY_SECRET'
-WEBHOOK_SECRET = 'YOUR_WEBHOOK_SECRET'
+API_TOKEN = os.getenv("API_TOKEN")
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+OWNER_ID = int(os.getenv("OWNER_ID"))
+OWNER_USERNAME = os.getenv("OWNER_USERNAME")
+ACCOUNT_PRICE = 10  # This can stay hardcoded or be made env too
+UPI_ID = os.getenv("UPI_ID")
+RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID")
+RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET")
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
 
 SESSION_DIR = "sessions"
 os.makedirs(SESSION_DIR, exist_ok=True)
