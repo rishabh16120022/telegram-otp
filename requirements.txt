@@ -4,3 +4,4 @@ flask
 razorpay
 qrcode
 pillow
+setuptools
